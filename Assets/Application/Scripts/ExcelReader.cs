@@ -9,7 +9,6 @@ public class ExcelReader : MonoBehaviour
     public TextAsset textAssetData;
     public GameObject toothBrush;
     public GameObject jaw;
-    public GameObject tooth;
     int stepNo = 0;
     Transform go;
     private void Start()
@@ -125,7 +124,7 @@ public class ExcelReader : MonoBehaviour
 
             posX = rotCenter.position.x + Mathf.Cos(angle) * rotRadius;
             posY = rotCenter.position.y + Mathf.Sin(angle) * rotRadius;
-            toothBrush.transform.position = new Vector2(posX, posY);
+            toothBrush.transform.position = new Vector3(posX, posY, 3.7f);
             angle = angle + Time.deltaTime * angularSpeed;
 
             if(angle >= 6f)
