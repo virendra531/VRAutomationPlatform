@@ -1,10 +1,10 @@
 ﻿Automation ,Step Number,Object Name,Action,X,Y,z,Radius,Rotation direction,Repeat,Media,Speed 
-Brushing,1,Toothbrush,Starting,25,1.4,4.3,0,NA,0,NA,0
-Brushing,2,Jaw,Starting,0,-4.4,0,0,NA,0,NA,0
-Brushing,3,Toothbrush,Rotate,-90,90,0,0,Clockwise,0,NA,0
-Brushing,4,Toothbrush,Move,18.5,0,4.3,0,NA,0,NA,3
-Brushing,5,Toothbrush,Rotate,-100,90,0,0,NA,0,NA,0
-Brushing,6,Toothbrush,Circular,-100,90,0,2,Clockwise,5,NA,2
+Brushing,1,Toothbrush,Starting,0.0571,1.7238,0.5376,0,NA,0,NA,0
+Brushing,2,Jaw,Starting,0.3,1.65,0.5,0,NA,0,NA,0
+Brushing,3,Toothbrush,Rotate,80.914,-86.267,-176.016,0,Clockwise,0,NA,0
+Brushing,4,Toothbrush,Move,0.1331,1.705,0.5378,0,NA,0,NA,3
+Brushing,5,Toothbrush,Rotate,83.471,-82.263,-172.126,0,NA,0,NA,0
+Brushing,6,Toothbrush,Circular,-100,90,0,0.01,Clockwise,5,NA,2
 Crowning,,Jaw,Starting ,,,,,,,,
 Crowning,,Tooth,Starting ,,,,,,,,
 Crowning,,,,,,,,,,,

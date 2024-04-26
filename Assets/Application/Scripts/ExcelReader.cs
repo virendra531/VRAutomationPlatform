@@ -3,26 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System;
+using TMPro;
+using UnityEngine.UI;
+
 
 public class ExcelReader : MonoBehaviour
 {
     public TextAsset textAssetData;
     public GameObject toothBrush;
     public GameObject jaw;
+    public TMP_Text messageTxt;
+    public TMP_Text stepsTxt;
+    public Button stepButton;
+
     int stepNo = 0;
     Transform go;
+    string[] data;
     private void Start()
     {
-        StartAction();
+        data = textAssetData.text.Split(new string[] {";","\n"}, System.StringSplitOptions.None);
+    }
+
+    public  void ChangeStep()
+    {
+        if(stepNo < data.Length)
+        {
+            stepNo++;
+            StartAction();
+            stepButton.interactable = false;
+        }
+    }
+    public void EnableButton()
+    {
+        stepButton.interactable = true;
     }
     string[] row;
     public void StartAction()
     {
-        string[] data = textAssetData.text.Split(new string[] {";","\n"}, System.StringSplitOptions.None);
-
-        if(stepNo < data.Length)
-        {
-            stepNo++;
 
             row = data[stepNo].Split(new char[]{','});
 
@@ -41,6 +58,8 @@ public class ExcelReader : MonoBehaviour
                 {
                     // go = toothBrush.transform;
                 }
+                messageTxt.text = row[0] + "/" + row[2] + "/" + row[3];
+                stepsTxt.text = row[1];
 
                 if(row[3] == "Starting" || row[3] == "Move")
                 {
@@ -59,7 +78,6 @@ public class ExcelReader : MonoBehaviour
                     Debug.Log("Please define a Automation name");
                 }
             }
-        }
     }
 
     void MoveAction(int stepnumber, Transform obj, string action, float X, float Y, float Z, float radius, string direction, int repeat, string media, float speed)
@@ -92,7 +110,7 @@ public class ExcelReader : MonoBehaviour
         }
         obj.position = end;
 
-        StartAction();
+        EnableButton();
     }
     
     IEnumerator RotateTo(Transform obj, Vector3 endPosition, float time)
@@ -108,7 +126,7 @@ public class ExcelReader : MonoBehaviour
         }
         obj.rotation = Quaternion.Euler(end);
 
-        StartAction();
+        EnableButton();
     }
     
     float posX, posY, angle = 0f;
@@ -124,7 +142,7 @@ public class ExcelReader : MonoBehaviour
 
             posX = rotCenter.position.x + Mathf.Cos(angle) * rotRadius;
             posY = rotCenter.position.y + Mathf.Sin(angle) * rotRadius;
-            toothBrush.transform.position = new Vector3(posX, posY, 3.7f);
+            toothBrush.transform.position = new Vector3(posX, posY, 0.537f);
             angle = angle + Time.deltaTime * angularSpeed;
 
             if(angle >= 6f)
@@ -134,7 +152,7 @@ public class ExcelReader : MonoBehaviour
             }
         }
 
-        StartAction();
+        EnableButton();
     }
 
 }
