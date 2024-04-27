@@ -22,7 +22,7 @@ public class ExcelReader : MonoBehaviour
     private void Start()
     {
         data = textAssetData.text.Split(new string[] {";","\n"}, System.StringSplitOptions.None);
-        ChangeStep();
+        // ChangeStep();
     }
 
     public  void ChangeStep()
@@ -112,7 +112,7 @@ public class ExcelReader : MonoBehaviour
         obj.position = end;
 
         EnableButton();
-        ChangeStep();
+        // ChangeStep();
     }
     
     IEnumerator RotateTo(Transform obj, Vector3 endPosition, float time)
@@ -129,7 +129,7 @@ public class ExcelReader : MonoBehaviour
         obj.rotation = Quaternion.Euler(end);
 
         EnableButton();
-        ChangeStep();
+        // ChangeStep();
     }
     
     float posX, posY, angle = 0f;
@@ -156,7 +156,7 @@ public class ExcelReader : MonoBehaviour
         }
 
         EnableButton();
-        ChangeStep();
+        // ChangeStep();
     }
 
 }
