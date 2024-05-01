@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1372875858}
-  m_IndirectSpecularColor: {r: 0.4328001, g: 0.46161342, b: 0.615147, a: 1}
+  m_IndirectSpecularColor: {r: 0.42894778, g: 0.46160293, b: 0.61772037, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -450,7 +450,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 139015524}
-  m_Mesh: {fileID: 9194989398887198900, guid: d534edeb877ce479f8fe80ac7c2b7379, type: 2}
+  m_Mesh: {fileID: 9003870247947288349, guid: d534edeb877ce479f8fe80ac7c2b7379, type: 2}
 --- !u!1001 &162356747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4249,19 +4249,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 262.1
+      value: 155.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 35.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.9567e-11
       objectReference: {fileID: 0}
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 147.05
+      value: 151.4
       objectReference: {fileID: 0}
     - target: {fileID: 4422659090696076826, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -79.5
+      value: -203.74998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422659090696076827, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
+      propertyPath: m_Name
+      value: FPSText
       objectReference: {fileID: 0}
     - target: {fileID: 4422659090696076827, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4422659091188657045, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
       propertyPath: m_Enabled
@@ -4530,6 +4542,14 @@ PrefabInstance:
     - target: {fileID: 8607500784391115102, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -211.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908833148325884413, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
+      propertyPath: m_Text
+      value: 'FPS: 60'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908833148325884413, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -5279,6 +5299,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1507073945385840591, guid: 7a6f862ca8c727d4c8a3ef7bc92f4b5d, type: 3}
   m_PrefabInstance: {fileID: 1251677758}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1283975657 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8908833148325884413, guid: fd28f23af44f73f4a95e33435872ad15, type: 3}
+  m_PrefabInstance: {fileID: 1169088252}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1319899109
 Mesh:
   m_ObjectHideFlags: 0
@@ -5891,6 +5922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1378731706}
   - component: {fileID: 1378731705}
+  - component: {fileID: 1378731707}
   m_Layer: 0
   m_Name: ReadExcel
   m_TagString: Untagged
@@ -5932,6 +5964,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1378731707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378731704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c9ef8e6ba887694f850e99a852ca321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsText: {fileID: 1283975657}
+  deltaTime: 0
 --- !u!1 &1415786855
 GameObject:
   m_ObjectHideFlags: 0
@@ -7815,7 +7861,7 @@ MonoBehaviour:
     settingsRendering:
       material: 0
       materialAsset: {fileID: 2100000, guid: e2e0d41b329c4480f8cfd0c21d81ab6a, type: 2}
-      renderer: 3
+      renderer: 1
       rendererLayers: 257
       rendererShadows: 1
       motionVectors: 0

@@ -238,9 +238,7 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
-  - {fileID: 11400000, guid: 290a6e6411d135049940bec2237b8938, type: 2}
-  - {fileID: -4133278326261981012, guid: 4c1640683c539c14080cfd43fbeffbda, type: 2}
+  - {fileID: 11400000, guid: 5c211151f05a9f3428c61947d7ad937d, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -261,7 +259,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.unity.template.urpsample
+    Android: com.DefaultCompany.VRAutomationPlatform
     Standalone: com.unity.template.urp-sample
     iPhone: com.unity.template.urp-sample
   buildNumber:
@@ -271,9 +269,9 @@ PlayerSettings:
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 23
+  AndroidMinSdkVersion: 29
   AndroidTargetSdkVersion: 0
-  AndroidPreferredInstallLocation: 1
+  AndroidPreferredInstallLocation: 0
   aotOptions: 
   stripEngineCode: 1
   iPhoneStrippingLevel: 0
@@ -352,7 +350,7 @@ PlayerSettings:
   clonedFromGUID: 25d942d79439af74f90fe7f671958252
   templatePackageId: com.unity.template.urp-sample@14.0.16
   templateDefaultScene: Assets/Scenes/Terminal/TerminalScene.unity
-  useCustomMainManifest: 0
+  useCustomMainManifest: 1
   useCustomLauncherManifest: 0
   useCustomMainGradleTemplate: 0
   useCustomLauncherGradleManifest: 0
